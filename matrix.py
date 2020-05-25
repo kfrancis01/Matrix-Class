@@ -112,7 +112,13 @@ class Matrix(object):
             raise(ValueError, "Matrices can only be added if the dimensions are the same") 
         #   
         # TODO - your code here
-        #
+            # Create an empty list
+        added_state = []
+
+        # Add the states together, element-wise
+        for i in range(self.state):
+            added_value = self.state[i] + other.state[i]
+            added_state.append(added_value)
 
     def __neg__(self):
         """
@@ -128,7 +134,7 @@ class Matrix(object):
         """
         #   
         # TODO - your code here
-        #
+
 
     def __sub__(self, other):
         """
@@ -136,7 +142,13 @@ class Matrix(object):
         """
         #   
         # TODO - your code here
-        #
+        # Create an empty list
+        sub_state = []
+
+        # Add the states together, element-wise
+        for i in range(self.state):
+            sub_value = self.state[i] - other.state[i]
+            sub_state.append(sub_value)
 
     def __mul__(self, other):
         """
@@ -145,6 +157,14 @@ class Matrix(object):
         #   
         # TODO - your code here
         #
+        # Create an empty list
+        mul_state = []
+
+        # Add the states together, element-wise
+        for r in range(self.state):
+            for c in range(self.state):
+                mul_value = self.state[i] * other.state[i]
+                mul_state.append(mul_value)
 
     def __rmul__(self, other):
         """
@@ -163,4 +183,10 @@ class Matrix(object):
             #   
             # TODO - your code here
             #
-            
+            # Create an empty list
+            rmul_state = []
+
+        # Multiple the states together, element-wise
+            for i in range(self.state):
+                rmul_value = self.state[i] * other
+                rmul_state.append(rmul_value)
