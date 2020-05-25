@@ -66,7 +66,12 @@ class Matrix(object):
         Returns a transposed copy of this Matrix.
         """
         # TODO - your code here
-
+        for c in range(self.h):
+            new = []
+        for r in range(self.w):
+            new.append(matrix[r][c])
+        print new
+        
     def is_square(self):
         return self.h == self.w
 
